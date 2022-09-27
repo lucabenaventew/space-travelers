@@ -1,5 +1,7 @@
 import './App.css';
 import { Link, Route, Routes } from 'react-router-dom';
+import React from 'react';
+import Missions from './Components/Missions';
 
 function App() {
   return (
@@ -13,14 +15,14 @@ function App() {
         </ul>
       </nav>
 
-      {/* <Routes>
+      <Routes>
         <Route
           path="/"
-          element={<Rockets />}
+          element={<Missions />}
         />
         <Route path="/categories" element={<Missions />} />
-        <Route path="/categories" element={<Profile />} />
-      </Routes> */}
+        {/* <Route path="/categories" element={<Profile />} /> */}
+      </Routes>
     </>
   );
 }

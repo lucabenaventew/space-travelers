@@ -24,16 +24,12 @@ export const missionsSlice = createSlice({
       state.missions = action.payload;
     });
     builder.addCase(fetchMissions.pending, (state) => {
-        state.status = 'loading';
-        }
-    );
+      state.status = 'loading';
+    });
     builder.addCase(fetchMissions.rejected, (state) => {
-        state.status = 'failed';
-        }
-    );
+      state.status = 'failed';
+    });
   },
 });
-
-//   export const { setBook, unsetBook } = booksSlice.actions;
 
 export default missionsSlice.reducer;
