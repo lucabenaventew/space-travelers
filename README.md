@@ -8,8 +8,9 @@ Web App where you can book a mission to space in your favorite rocket.
 - CSS
 - Javascript ES6
 - React
+- Redux
 
-## Live Demo
+## Live Demo (SOON!)
 Visit this [GitHub pages link](https://lucabenaventew.github.io/) to see the live demo. 🟢🟢🟢
 
 ## Getting Started
@@ -29,11 +30,11 @@ $ cd space-travelers
 - Twitter: [@BenaventeLuca](https://twitter.com/BenaventeLuca)
 - LinkedIn: [lucabenaventew](https://linkedin.com/in/lucabenaventew/)
 
-👤 **@author2**
+👤 **Daniel González Sierra**
 
-- GitHub: [@author2](https://github.com/author2)
-- Twitter: [@author2](https://twitter.com/author2)
-- LinkedIn: [author2](https://linkedin.com/in/author2/)
+- GitHub: [@dgonzalesi](https://github.com/dgonzalesi/)
+- Twitter: [@dgonzalesi](https://twitter.com/dgonzalesi/)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/daniel-g-sierra-60472719/)
 
 
 ## Show your support
