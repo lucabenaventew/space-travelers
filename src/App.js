@@ -13,14 +13,14 @@ function App() {
         </ul>
       </nav>
 
-      <Routes>
+      {/* <Routes>
         <Route
           path="/"
           element={<Rockets />}
         />
         <Route path="/categories" element={<Missions />} />
         <Route path="/categories" element={<Profile />} />
-      </Routes>
+      </Routes> */}
     </>
   );
 }
