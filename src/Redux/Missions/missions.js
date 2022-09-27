@@ -1,5 +1,4 @@
 import { createSlice } from '@reduxjs/toolkit';
-import rockets from '../Rockets/rockets';
 
 const initialState = {
     missions: [],
