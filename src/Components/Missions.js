@@ -43,7 +43,7 @@ function Missions() {
           <th className="head-table">Mission</th>
           <th className="head-table">Description</th>
           <th className="head-table">Status</th>
-          <th> Join </th>
+          <th className="head-table"> Join </th>
         </tr>
         {domTemplate()}
       </table>
