@@ -1,5 +1,6 @@
-import './App.css';
 import { Link, Route, Routes } from 'react-router-dom';
+import React from 'react';
+import Missions from './Components/Missions';
 
 function App() {
   return (
@@ -8,19 +9,19 @@ function App() {
         <h2 className="navbar-logo">logo</h2>
         <ul className="navbar-elements">
           <li className="navbar-element"><Link className="navtext" to="/">Rockets</Link></li>
-          <li className="navbar-element"><Link className="navtext" to="/">Missions</Link></li>
+          <li className="navbar-element"><Link className="navtext" to="/Missions">Missions</Link></li>
           <li className="navbar-element"><Link className="navtext" to="/">My Profile</Link></li>
         </ul>
       </nav>
 
-      {/* <Routes>
+      <Routes>
         <Route
           path="/"
-          element={<Rockets />}
+          element="{}"
         />
-        <Route path="/categories" element={<Missions />} />
-        <Route path="/categories" element={<Profile />} />
-      </Routes> */}
+        <Route path="/Missions" element={<Missions />} />
+        {/* <Route path="/categories" element={<Profile />} /> */}
+      </Routes>
     </>
   );
 }
