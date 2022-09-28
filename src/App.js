@@ -1,28 +1,19 @@
-import { Link, Route, Routes } from 'react-router-dom';
-import React from 'react';
-import Missions from './Components/Missions';
+import { Route, Routes } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import RocketsPage from './Pages/RocketsPage';
+import Missions from './components/Missions';
+import MyProfilePage from './Pages/MyProfilePage';
 
 function App() {
   return (
-    <>
-      <nav className="navbar">
-        <h2 className="navbar-logo">logo</h2>
-        <ul className="navbar-elements">
-          <li className="navbar-element"><Link className="navtext" to="/">Rockets</Link></li>
-          <li className="navbar-element"><Link className="navtext" to="/Missions">Missions</Link></li>
-          <li className="navbar-element"><Link className="navtext" to="/">My Profile</Link></li>
-        </ul>
-      </nav>
-
+    <div className="App">
+      <Navbar />
       <Routes>
-        <Route
-          path="/"
-          element="{}"
-        />
-        <Route path="/Missions" element={<Missions />} />
-        {/* <Route path="/categories" element={<Profile />} /> */}
+        <Route path="/" element={<RocketsPage />} />
+        <Route path="Missions" element={<Missions />} />
+        <Route path="MyProfile" element={<MyProfilePage />} />
       </Routes>
-    </>
+    </div>
   );
 }
 
