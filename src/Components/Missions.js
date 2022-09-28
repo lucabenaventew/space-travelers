@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchMissions, reserveMission } from '../Redux/Missions/missions';
+import './Missions.css';
 
 function Missions() {
   const dispatch = useDispatch();
@@ -32,18 +33,19 @@ function Missions() {
     <tr key={mission.mission_id}>
       <td>{mission.mission_name}</td>
       <td>{mission.description}</td>
-      <td>{memberStatus(mission.reserved)}</td>
+      <td className="membernactive"><div className="memberstyle">{memberStatus(mission.reserved)}</div></td>
       <td><button onClick={() => { checkStatus(mission.mission_id); }} type="submit">{memberLeave(mission.reserved)}</button></td>
     </tr>
   ));
 
   return (
-    <div className="missions-cointainer">
+    <div className="missions-container">
       <table className="missions-table">
         <tr>
           <th className="head-table">Mission</th>
           <th className="head-table">Description</th>
           <th className="head-table">Status</th>
+          <th> Join </th>
         </tr>
         {domTemplate()}
       </table>
