@@ -89,3 +89,7 @@ table, th, td {
     color: rgb(248, 63, 63);
     min-width: 150px;
 }
+
+.row-4 {
+    min-width: 150px;
+}
