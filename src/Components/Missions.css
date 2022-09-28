@@ -63,3 +63,27 @@ table, th, td {
     border-radius: 5px;
     padding: 2px;
 }
+
+/* BUTTONS NOT ACTIVE */
+
+.btn-mission {
+    background-color: transparent;
+    padding: 5px 10px;
+    min-width: 120px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.btnactive {
+    border: 1px solid #000;
+    color: #000;
+}
+
+.btinactive {
+    border: 1px solid rgb(248, 63, 63);
+    color: rgb(248, 63, 63);
+}

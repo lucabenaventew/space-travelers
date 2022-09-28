@@ -32,7 +32,7 @@ function Missions() {
       <td>{mission.mission_name}</td>
       <td>{mission.description}</td>
       <td className="membernactive"><div className={mission.reserved ? 'memberstyle' : 'notmemberstyle'}>{memberStatus(mission.reserved)}</div></td>
-      <td><button onClick={() => { checkStatus(mission.mission_id); }} type="submit">{memberLeave(mission.reserved)}</button></td>
+      <td><button className={`btn-mission ${mission.reserved ? 'btinactive' : 'btnactive'}`} onClick={() => { checkStatus(mission.mission_id); }} type="submit">{memberLeave(mission.reserved)}</button></td>
     </tr>
   ));
 
