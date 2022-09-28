@@ -1,38 +1,53 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchMissions } from '../Redux/Missions/missions';
+import { fetchMissions, reserveMission } from '../Redux/Missions/missions';
 
 function Missions() {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(fetchMissions());
   }, []);
-  const missions = useSelector((state) => state.missions);
+  const { missions } = useSelector((state) => state.missions);
   console.log(missions);
+  const checkStatus = (id) => {
+    const mission = missions.find((m) => m.mission_id === id);
+    dispatch(reserveMission(id));
+    console.log(mission.reserved);
+    return mission.reserved;
+  };
+  const memberStatus = (status) => {
+    if (status) {
+      return 'Active Member';
+    }
+    return 'Not a Member';
+  };
+
+  const memberLeave = (status) => {
+    if (status) {
+      return 'Leave Mission';
+    }
+    return 'Join Mission';
+  };
+  const domTemplate = () => missions.map((mission) => (
+    <tr key={mission.mission_id}>
+      <td>{mission.mission_name}</td>
+      <td>{mission.description}</td>
+      <td>{memberStatus(mission.reserved)}</td>
+      <td><button onClick={() => { checkStatus(mission.mission_id); }} type="submit">{memberLeave(mission.reserved)}</button></td>
+    </tr>
+  ));
+
   return (
-    missions.map((mission) => (
-        <table className="missions-table">
+    <div className="missions-cointainer">
+      <table className="missions-table">
         <tr>
           <th className="head-table">Mission</th>
           <th className="head-table">Description</th>
           <th className="head-table">Status</th>
-          <th className="head-table"><button type="submit">Join</button></th>
         </tr>
-        <tr>
-          <td>Alfreds Futterkiste</td>
-          <td>Maria Anders</td>
-          <td>Germany</td>
-          <td><button type="submit">Join</button></td>
-        </tr>
-        <tr>
-          <td>Centro comercial Moctezuma</td>
-          <td>Francisco Chang</td>
-          <td>Mexico</td>
-          <td><button type="submit">Join</button></td>
-        </tr>
+        {domTemplate()}
       </table>
-    );
-
+    </div>
   );
 }
 
