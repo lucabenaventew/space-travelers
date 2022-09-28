@@ -42,3 +42,14 @@ table, th, td {
     color: white;
 }
 
+.membernactive {
+  color: #fff;
+  min-width: 100px;
+}
+
+
+.memberstyle {
+    background-color: #616d71;
+    border-radius: 5px;
+    padding: 2px;
+}
