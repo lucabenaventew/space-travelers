@@ -9,11 +9,9 @@ function Missions() {
     dispatch(fetchMissions());
   }, []);
   const { missions } = useSelector((state) => state.missions);
-  console.log(missions);
   const checkStatus = (id) => {
     const mission = missions.find((m) => m.mission_id === id);
     dispatch(reserveMission(id));
-    console.log(mission.reserved);
     return mission.reserved;
   };
   const memberStatus = (status) => {
@@ -33,7 +31,7 @@ function Missions() {
     <tr key={mission.mission_id}>
       <td>{mission.mission_name}</td>
       <td>{mission.description}</td>
-      <td className="membernactive"><div className="memberstyle">{memberStatus(mission.reserved)}</div></td>
+      <td className="membernactive"><div className={mission.reserved ? 'memberstyle' : 'notmemberstyle'}>{memberStatus(mission.reserved)}</div></td>
       <td><button onClick={() => { checkStatus(mission.mission_id); }} type="submit">{memberLeave(mission.reserved)}</button></td>
     </tr>
   ));

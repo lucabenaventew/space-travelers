@@ -12,6 +12,7 @@ table, th, td {
     padding: 20px;
     width: 100vw;
     height: 90vh;
+    padding-top: 5%;
 }
 
 .missions-table {
@@ -42,14 +43,23 @@ table, th, td {
     color: white;
 }
 
+/* NOT A MEMBER */
 .membernactive {
   color: #fff;
-  min-width: 100px;
+  min-width: 150px;
 }
 
 
-.memberstyle {
+.notmemberstyle {
     background-color: #616d71;
+    border-radius: 5px;
+    padding: 2px;
+}
+
+/* ACTIVE MEMBER */
+
+.memberstyle {
+    background-color: #3399fe;
     border-radius: 5px;
     padding: 2px;
 }
