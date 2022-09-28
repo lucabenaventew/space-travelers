@@ -10,12 +10,14 @@ body {
 }
 
 .navigation-bar {
-  position: fixed;
+  position: relative;
   width: 100%;
+  min-height: 90px;
   z-index: 10;
   display: flex;
   justify-content: space-around;
-  padding: 25px 0;
+  padding: 10px 0;
+  background-color: #fff;
 }
 
 .nav-logo {
@@ -73,7 +75,7 @@ body {
   flex-direction: column;
   overflow-y: auto;
   gap: 20px;
-  padding: 150px 0;
+  padding: 50px 0;
   background-size: cover;
   background-repeat: no-repeat;
   color: white;

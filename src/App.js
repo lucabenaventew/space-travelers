@@ -1,9 +1,8 @@
 import { Route, Routes } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import RocketsPage from './Pages/RocketsPage';
-// import MissionsPage from './Pages/MissionsPage';
+import Missions from './components/Missions';
 import MyProfilePage from './Pages/MyProfilePage';
-// import Footer from './components/Footer';
 
 function App() {
   return (
@@ -11,10 +10,9 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<RocketsPage />} />
-        {/* <Route path="Missions" element={<MissionsPage />} /> */}
+        <Route path="Missions" element={<Missions />} />
         <Route path="MyProfile" element={<MyProfilePage />} />
       </Routes>
-      {/* <Footer /> */}
     </div>
   );
 }
