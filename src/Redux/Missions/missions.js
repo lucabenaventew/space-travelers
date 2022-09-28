@@ -1,15 +1,14 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
-    missions: [],
+  missions: [],
 };
 
 export const missionsSlice = createSlice({
-    name: 'missions',
-    initialState,
+  name: 'missions',
+  initialState,
 });
-  
+
 //   export const { setBook, unsetBook } = booksSlice.actions;
-  
-  export default missionsSlice.reducer;
-  
+
+export default missionsSlice.reducer;

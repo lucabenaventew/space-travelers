@@ -1,27 +1,21 @@
-import './App.css';
-import { Link, Route, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import RocketsPage from './Pages/RocketsPage';
+// import MissionsPage from './Pages/MissionsPage';
+import MyProfilePage from './Pages/MyProfilePage';
+// import Footer from './components/Footer';
 
 function App() {
   return (
-    <>
-      <nav className="navbar">
-        <h2 className="navbar-logo">logo</h2>
-        <ul className="navbar-elements">
-          <li className="navbar-element"><Link className="navtext" to="/">Rockets</Link></li>
-          <li className="navbar-element"><Link className="navtext" to="/">Missions</Link></li>
-          <li className="navbar-element"><Link className="navtext" to="/">My Profile</Link></li>
-        </ul>
-      </nav>
-
-      {/* <Routes>
-        <Route
-          path="/"
-          element={<Rockets />}
-        />
-        <Route path="/categories" element={<Missions />} />
-        <Route path="/categories" element={<Profile />} />
-      </Routes> */}
-    </>
+    <div className="App">
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<RocketsPage />} />
+        {/* <Route path="Missions" element={<MissionsPage />} /> */}
+        <Route path="MyProfile" element={<MyProfilePage />} />
+      </Routes>
+      {/* <Footer /> */}
+    </div>
   );
 }
 
