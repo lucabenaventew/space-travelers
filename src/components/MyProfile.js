@@ -4,12 +4,10 @@ import './MyProfile.css';
 
 const MyProfile = () => {
   const rockets = useSelector((state) => state.rockets);
-  console.log(rockets);
   const missions = useSelector((state) => state.missions.missions);
   const activeMissions = missions.filter((mission) => mission.reserved);
 
   const rocketsReservation = rockets.filter((rocket) => rocket.reserved);
-  console.log(rocketsReservation);
 
   return (
     <>
