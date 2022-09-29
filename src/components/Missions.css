@@ -6,20 +6,21 @@ td {
 }
 
 .missions-container {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 0 auto;
-  padding: 20px;
-  width: 100vw;
-  height: 100vh;
-  padding-top: 45%;
+  width: 100%;
+  height: 90vh;
 }
 
 .missions-table {
+  display: block;
+  overflow-x: overlay;
+  border: #3399fe 2px solid;
   width: 90%;
-  height: 100%;
+  height: 100vh;
 }
 
 .missions-table td {
