@@ -32,7 +32,7 @@ const MyProfile = () => {
         <div className="missions-profile">
           <h2 className="profile-title">Missions</h2>
           <ul className="profile-list">
-            {activeMissions.map((mission) => (
+            {activeMissions.length === 0 ? 'No Missions Booked' : activeMissions.map((mission) => (
               <li className="mission-reserved" key={mission.mission_id}>
                 {mission.mission_name}
               </li>
